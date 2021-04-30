@@ -8,13 +8,11 @@ function App() {
       <BlurWrapper>
         <Advice/>
       </BlurWrapper>
-      <GithubIconWrapper>
-        <a href="https://github.com/mohammira/Random-Advice"
+      <a href="https://github.com/mohammira/Random-Advice"
           title="See the code on Github!"
           target="_blank">
           <GithubIcon size="25px"/>
-        </a>
-      </GithubIconWrapper>
+      </a>
     </Container>
   );
 }
@@ -22,10 +20,8 @@ function App() {
 export default App;
 
 const Container = styled.div`
-  /* background: rgb(163,188,249);
-  background: linear-gradient(225deg, rgba(163,188,249,1) 0%, rgba(119,150,203,1) 66%, rgba(209,210,249,1) 100%); */
   background: rgb(163,188,249);
-  background: linear-gradient(225deg, rgba(163,188,249,1) 0%, rgba(119,150,203,1) 39%, rgba(209,210,249,1) 100%); 
+  background: linear-gradient(333deg, rgba(163,188,249,1) 16%, rgba(119,150,203,1) 45%, rgba(209,210,249,1) 73%);
   overflow: auto;
   position: absolute;
   height: 100%;
@@ -33,54 +29,57 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  
 `;
 const BlurWrapper = styled.div`
   margin-top: 150px;
-  background: rgb(255,255,255,0.2);
+  background: rgb(255,255,255,0.15);
   height: 60%;
   width: 30%;
   border-radius: 8px;
-  /* box-shadow: 0px 0px 20px 10px #292929; */
-  
-  @keyframes fadeIn{
-        0% {
-        opacity: 0;
-        transform: translateY(-10px);
-        }
-        100% { 
-        opacity: 1;
-        transform: translateY(0px);
-        }
-    }
-    animation: fadeIn 2s;
-`;
-
-const GithubIconWrapper = styled.div` 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 20px;
+  animation: fadeIn 2s;
 
   @keyframes fadeIn{
-        0% {
-        opacity: 0;
-        transform: translateY(-10px);
-        }
-        100% { 
-        opacity: 1;
-        transform: translateY(0px);
-        }
+    0% {
+      opacity: 0;
+      transform: translateY(-10px);
     }
-    animation: fadeIn 2s;
+    100% { 
+      opacity: 1;
+      transform: translateY(0px);
+    }
+  }
+
+  @media (max-width: 812px){
+    /* overflow: auto; */
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    margin-top: 0px;
+  }
+
 `;
 
 const GithubIcon = styled(GoMarkGithub)`
   color: #576490;
+  margin-top: 20px;
+  animation: fadeIn 2s;
+
+  @keyframes fadeIn{
+    0% {
+    opacity: 0;
+    transform: translateY(-10px);
+    }
+    100% { 
+    opacity: 1;
+    transform: translateY(0px);
+    }
+  }
   
   :hover{
     color: #363E59;
     transform: translateY(3px);
+  }
+  @media (max-width: 812px){
+    display:none;
   }
 `;

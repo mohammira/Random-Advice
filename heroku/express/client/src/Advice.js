@@ -39,20 +39,19 @@ class Advice extends Component {
 export default Advice;
 
 const Container = styled.div`
-    /* position: absolute; */
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 80px;
+    margin-top: 70px;
 
     @keyframes fadeIn{
         0% {
-        opacity: 0;
-        transform: translateY(-10px);
+            opacity: 0;
+            transform: translateY(-10px);
         }
         100% { 
-        opacity: 1;
-        transform: translateY(0px);
+            opacity: 1;
+            transform: translateY(0px);
         }
     }
     animation: fadeIn 2s;
@@ -69,7 +68,7 @@ const Container = styled.div`
         border-radius: 8px;
         background-color: white;
         color: #576490;
-        font-size: 17px;
+        font-size: 15px;
         font-family: 'Lato';
 
         &:hover{
@@ -77,20 +76,43 @@ const Container = styled.div`
             border-radius: 8px;
             background-color: #576490;
             color: white;
-            /* transform: translateY(-3px); */
+        }
+    }
+
+    @media (max-width: 1200px){
+        margin-top:60px;
+    }
+
+    @media (max-width: 812px){
+        margin-top: 130px;
+
+        h1{
+            font-size: 50px;
+            padding: 0px 30px;
         }
     }
 `;
 
 const AdviceWrapper = styled.div` 
     h2{
-        margin-top: 40px;
-        padding: 0px 25px;
+        margin-top: 30px;
+        padding: 0px 30px;
         font-size: 30px;
         font-family: 'Work Sans';
         text-align: center;
         color: #292929;
         white-space:normal;
+
+        @media (max-width: 1200px){
+            margin-top:25px;
+            /* padding: 0px 30px; */
+            /* font-size: 27px; */
+        }
+        @media (max-width: 812px){
+            margin-top: 30px;
+            padding: 0px 40px;
+            font-size: 35px;
+        }
     }
 `;
 
