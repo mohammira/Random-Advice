@@ -1,6 +1,6 @@
 # Random-Advice
 
-[Live Code on Heroku](https://pieceofadvice.herokuapp.com/)
+[Live Code](https://pieceofadvice.herokuapp.com/)
 
 Super simple and basic random advice generator made with React and Express, using the [Advice Slip API](https://api.adviceslip.com/).
 
